@@ -10,7 +10,7 @@ def bin_string(binary):
 #Asal sayılar https://en.wikipedia.org/wiki/Prime_number adresinden alınmıştır.
 def anahtar_verileri(x):
     p = 2996863034895*2**1290000+1
-    q = 2996863034895*2*1290000-1
+    q = 2996863034895*2**1290000-1
     n = p * q
     if x == 1:
         return p
