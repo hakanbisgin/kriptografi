@@ -43,8 +43,8 @@ def decryprabin(binary):
     q = int(anahtar_verileri(2))
     n = int(anahtar_verileri(3))
     yp_yq_hesapla = egcd(p,q)
-    mp = math.sqrt(metin)%p
-    mq = math.sqrt(metin)%q
+    mp = (pow(metin,((p+1)//4),p))
+    mq = (pow(metin,((q+1)//4),q))
     yp = yp_yq_hesapla[1]
     yq = yp_yq_hesapla[2]
     s1 =(yp*mq*p+yq*mp*q)%n
