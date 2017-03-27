@@ -9,8 +9,32 @@ def bin_string(binary):
 
 #Asal sayılar https://en.wikipedia.org/wiki/Prime_number adresinden alınmıştır.
 def anahtar_verileri(x):
-    p = 2996863034895*2**1290000+1
-    q = 2996863034895*2**1290000-1
+    #p = 2996863034895*2**1290000+1
+    #q = 2996863034895*2**1290000-1
+    #twin primes üzerinde işlemler uzun sürdüğünden 10**12'den büyük asal sayılar pythona seçtirildi.
+    #ilgili python kodu
+    """'''
+    import math
+    asal=True
+    y = 10**12+1
+    x = 10**13
+    while y<=x:
+        asal = True
+        z = 3
+        while z<math.sqrt(y):
+
+            kalan=y%z
+            if kalan==0:
+                asal = False
+                break
+            z=z+1
+        if asal:
+            print (y, "sayısı bir asal sayıdır")
+        y=y+2
+    '''"""
+    
+    p = 1000000000271
+    q = 1000000000169
     n = p * q
     if x == 1:
         return p
