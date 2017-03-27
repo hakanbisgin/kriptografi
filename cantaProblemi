@@ -1,0 +1,19 @@
+def aHesapla(x):
+    taban = 2
+    return taban ** x
+
+
+def listeVer(x):
+    liste = []
+    b = 64
+    while x > 0:
+        if aHesapla(b) < x:
+            liste.add(aHesapla(b))
+            x = x - aHesapla(b)
+    return liste
+
+
+inp = input('Hesaplanacak olan sayıyı giriniz: ')
+inp = int(inp)
+liste = listeVer(inp)
+print(liste.reverse())
